@@ -1,0 +1,24 @@
+{
+  "config": {
+    "projectName": "myhelix",
+    "src": {
+      "root": "src/",
+      "sass": "src/sass",
+      "pages": "src/views/pages/",
+      "templates": "src/views/",
+      "img": "src/img/",
+      "js": "src/js/",
+      "iconsSvg": "src/icons",
+      "sassGen": "src/sass/generated",
+      "fonts": "src/fonts"
+    },
+    "build": {
+      "root": "build/",
+      "css": "build/css",
+      "js": "build/js",
+      "html": "build",
+      "img": "build/img",
+      "fonts": "build/fonts"
+    }
+  }
+}

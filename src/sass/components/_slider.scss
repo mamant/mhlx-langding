@@ -1,0 +1,469 @@
+.habits-slider {
+  margin: 120px 0 0 0;
+  position: relative;
+  padding: 0 0 125px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .habits-slider {
+    padding: 0
+  }
+}
+
+.habits-slider-slide:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+@media (max-width: 600px) {
+  .habits-slider-slide {
+    padding: 0 0 50px 0
+  }
+}
+
+.habits-slider .img-slider {
+  float: left;
+  width: 450px
+}
+
+@media (max-width: 1100px) {
+  .habits-slider .img-slider {
+    margin: 0 0 50px 0
+  }
+}
+
+@media (max-width: 800px) {
+  .habits-slider .img-slider {
+    float: none;
+    margin: 50px auto;
+    width: 90%
+  }
+}
+
+.habits-slider .slide-top-content {
+  width: calc(100% - 500px);
+  float: right;
+  padding: 15px 0 0 0
+}
+
+@media (max-width: 800px) {
+  .habits-slider .slide-top-content {
+    float: none;
+    width: 100%
+  }
+}
+
+.habits-slider .slide-title {
+  font-weight: 700;
+  font-size: 36px;
+  color: #000;
+  letter-spacing: 1px;
+  line-height: 44px;
+  margin: 0 0 15px 0
+}
+
+.habits-slider .slide-subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  color: #000;
+  line-height: 30px
+}
+
+.habits-slider .slide-bottom-content {
+  width: calc(100% - 300px);
+  min-height: 350px;
+  background: #4e2d6b;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0
+}
+
+@media (max-width: 1100px) {
+  .habits-slider .slide-bottom-content {
+    width: 100%;
+    position: relative;
+    clear: both;
+    margin: 50px 0 0 0
+  }
+}
+
+.habits-slider .text-slider {
+  width: 600px;
+  text-align: left;
+  margin: 80px 0 0 240px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  line-height: 24px
+}
+
+@media (max-width: 1250px) {
+  .habits-slider .text-slider {
+    width: calc(100% - 350px);
+    margin: 30px 0 0 240px
+  }
+}
+
+@media (max-width: 1100px) {
+  .habits-slider .text-slider {
+    margin: 0;
+    padding: 50px 50px 0 50px
+  }
+}
+
+@media (max-width: 800px) {
+  .habits-slider .text-slider {
+    width: 100%;
+    padding: 0;
+
+    & .text-slide {
+      padding: 20px 20px 0;
+    }
+  }
+}
+
+.habits-slider .text-slider strong {
+  font-weight: 700
+}
+
+.habits-slider .slider-nav-steps {
+  width: 480px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -240px;
+  bottom: -15px
+}
+
+.habits-slider .slider-nav-steps .current-slide-marker {
+  position: absolute;
+  top: 0;
+  right: inherit;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #EE2667;
+  transition: all .3s ease;
+  z-index: 1
+}
+
+.habits-slider .slider-nav-steps .current-slide-marker.left {
+  left: 0;
+  transition: all .3s ease
+}
+
+@media (max-width: 530px) {
+  .habits-slider .slider-nav-steps .current-slide-marker.left {
+    left: 25px
+  }
+}
+
+.habits-slider .slider-nav-steps .current-slide-marker.middle {
+  left: 50%;
+  margin-left: -40px;
+  transition: all .3s ease
+}
+
+.habits-slider .slider-nav-steps .current-slide-marker.right {
+  left: 100%;
+  margin-left: -80px;
+  transition: all .3s ease
+}
+
+@media (max-width: 530px) {
+  .habits-slider .slider-nav-steps .current-slide-marker.right {
+    margin-left: -105px
+  }
+}
+
+@media (max-width: 530px) {
+  .habits-slider .slider-nav-steps {
+    padding: 0 25px;
+    width: 300px;
+    margin-left: -170px;
+    margin-top: 51px;
+    position: relative
+  }
+}
+
+.habits-slider .slider-nav-steps .step {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 2px;
+  border-radius: 50%;
+  padding: 32px 0 0 0;
+  transition: all .3s ease;
+  border: 1px solid transparent;
+  z-index: 2;
+  position: relative
+}
+
+.habits-slider .control {
+  width: 70px;
+  height: 20px;
+  display: block
+}
+
+@media (max-width: 740px) {
+  .habits-slider .control {
+    display: none
+  }
+}
+
+.habits-slider .left-control {
+  background: url(../img/left-long-arrow.svg) no-repeat;
+  position: absolute;
+  left: 30px;
+  bottom: 50px;
+  transition: all .3s ease
+}
+
+.habits-slider .left-control:hover {
+  transition: all .3s ease;
+  left: 27px
+}
+
+.habits-slider .right-control {
+  background: url(../img/right-long-arrow.svg) no-repeat;
+  position: absolute;
+  right: 30px;
+  bottom: 50px;
+  transition: all .3s ease
+}
+
+.habits-slider .right-control:hover {
+  transition: all .3s ease;
+  right: 27px
+}
+
+.habits-slider .download-example-pdf {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #daa143;
+  display: inline-block;
+
+  & img {
+    float: right;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .habits-slider .download-example-pdf {
+    position: relative;
+    display: block;
+    margin: 20px 0 0 0
+  }
+}
+
+// own carousel styles
+.owl-height {
+  transition: height 500ms ease-in-out
+}
+
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1
+}
+
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y
+}
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0
+}
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0px, 0px, 0px)
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.owl-carousel.owl-loaded {
+  display: block
+}
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block
+}
+
+.owl-carousel.owl-hidden {
+  opacity: 0
+}
+
+.owl-carousel .owl-refresh .owl-item {
+  display: none
+}
+
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+}
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%
+}
+
+.owl-carousel.owl-text-select-on .owl-item {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto
+}
+
+.owl-carousel .owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab
+}
+
+.owl-carousel.owl-rtl {
+  direction: rtl
+}
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right
+}
+
+.no-js .owl-carousel {
+  display: block
+}
+
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity 400ms ease
+}
+
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000
+}
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: scale 100ms ease
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+  transition: scale(1.3, 1.3)
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none
+}
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 400ms ease
+}
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1
+}
+
+.owl-theme .owl-controls {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent
+}
+
+.owl-theme .owl-controls .owl-nav [class*=owl-] {
+  display: inline-block
+}
+
+.owl-theme .owl-controls .owl-nav .disabled {
+  opacity: .5;
+  cursor: default
+}
+
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #f8b142;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #e41b74
+}
