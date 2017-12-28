@@ -1942,6 +1942,9 @@ input[type="radio"].u-radio {
     margin-bottom: 15px;
     line-height: 1.6; }
 
+.box--relative {
+  position: relative; }
+
 img,
 video {
   max-width: 100%; }
@@ -2107,6 +2110,56 @@ video {
 .has-mobile-menu .navigation-button-close,
 .has-mobile-menu .page-header--mobile-menu {
   display: block; }
+
+.lang-placeholder {
+  background: #fff; }
+  .lang-placeholder a {
+    text-transform: uppercase;
+    color: #333;
+    font-size: 14px; }
+    .lang-placeholder a:hover {
+      color: #e2b054; }
+
+.lang-element-switch {
+  padding: 0 15px 0 5px;
+  position: relative;
+  display: inline-block; }
+  .lang-element-switch:before {
+    content: '';
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-left: 1px solid #9B9B9B;
+    border-bottom: 1px solid #9B9B9B;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: 2; }
+
+.lang-placeholder:hover .lang-group {
+  height: auto;
+  overflow: visible;
+  padding-top: 23px; }
+
+.lang-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  font-size: 14px; }
+  .lang-group a {
+    display: block;
+    padding: 5px 15px 5px 5px;
+    background: #fff; }
 
 .habits-slider {
   margin: 120px 0 0 0;
