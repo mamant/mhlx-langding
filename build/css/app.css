@@ -2591,7 +2591,10 @@ video {
     margin-top: 30px;
     max-width: 400px; }
   .section-how .section-title--big {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .page-header .u-btn {
+    font-size: .65rem;
+    padding: 0 10px; } }
 
 @media screen and (max-width: 900px) and (min-width: 680px) {
   .section-tests--table td {
